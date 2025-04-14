@@ -3,11 +3,12 @@
 client_id = "fdb50180e8208aee0a04e9326dbf6418"
 name = "qr-code-app"
 handle = "qr-code-app-321"
-application_url = "https://example.com/"
+application_url = "https://leave-integral-geek-thumb.trycloudflare.com"
 embedded = true
 
 [build]
 include_config_on_deploy = true
+automatically_update_urls_on_dev = true
 
 [webhooks]
 api_version = "2025-04"
@@ -25,7 +26,11 @@ api_version = "2025-04"
 scopes = "write_products"
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = [
+  "https://leave-integral-geek-thumb.trycloudflare.com/auth/callback",
+  "https://leave-integral-geek-thumb.trycloudflare.com/auth/shopify/callback",
+  "https://leave-integral-geek-thumb.trycloudflare.com/api/auth/callback"
+]
 
 [pos]
 embedded = false
